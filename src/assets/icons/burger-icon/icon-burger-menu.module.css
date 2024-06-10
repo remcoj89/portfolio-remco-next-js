@@ -1,0 +1,50 @@
+.burgerIconWrapper {
+  cursor: pointer;
+  display: block;
+  width: 3rem;
+}
+
+.bar1, .bar2, .bar3 {
+  background-color: var(--color-gray-400);
+  height: 0.2rem;
+  margin-block: 6px;
+  transition: 0.4s;
+}
+
+.bar1 {
+  margin-inline: auto 4px;
+  width: 70%;
+}
+ .bar2 {
+   width: 100%;
+ }
+.bar3 {
+  margin-inline: 2px auto;
+  width: 70%;
+}
+
+.bar1.change,  .bar3.change {
+  margin-inline: 0;
+  width:100%;
+}
+
+.bar1.change {
+
+transform: translate(0, 11px) rotate(-45deg);
+}
+
+.bar2.change {
+
+opacity: 0;
+}
+
+.bar3.change {
+
+transform: translate(0, -11px) rotate(45deg);
+}
+
+@media(min-width: 480px) {
+  .burgerIconWrapper {
+    display: none;
+  }
+}
