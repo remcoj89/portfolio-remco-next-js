@@ -1,9 +1,17 @@
-.navbar {
-  --nav-bar-padding-block: 3rem;
-  padding-block: var(--nav-bar-padding-block);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+
+@media (prefers-reduced-motion: no-preference) {
+  .navbar {
+    --nav-bar-padding-block: 3rem;
+    padding-block: var(--nav-bar-padding-block);
+    position: -webkit-fixed;
+    position: fixed;
+    top: 0;
+    inset-inline: 0;
+    z-index: 100;
+    animation: scroll-watcher linear forwards;
+    animation-timeline: scroll();
+    animation-range: 10px 25vh;
+  }
 }
 
 .navContainer {
@@ -11,7 +19,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  position: relative; 
+  position: relative;
 }
 
 .logo {
@@ -56,7 +64,7 @@
 }
 
   .active {
-  color: var(--color-primary-400);
+  color: var(--color-cyan-100);
 }
 
 .contactLinkWrapper {
@@ -104,5 +112,15 @@
 
   .navDivider {
     display: inline-block;
+  }
+}
+
+@keyframes scroll-watcher {
+  from { background: transparent;}
+  to {
+    background: rgba(var(--color-nav-background), 1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(5px);
   }
 }

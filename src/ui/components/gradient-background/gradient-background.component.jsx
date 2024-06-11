@@ -21,7 +21,7 @@ export default function gradientBackgroundComponent() {
         <div className={Styles.gradient3} />
         <div className={Styles.gradient4} />
         <div className={Styles.gradient5} />
-        <div class={Styles.interactive} />
+        <div className={Styles.interactive} />
       </div>
     </div>
   )

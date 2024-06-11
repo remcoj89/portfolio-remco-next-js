@@ -1,0 +1,20 @@
+@media (prefers-reduced-motion: no-preference) {
+  .scrollWatcher {
+    background-color: var(--color-green-400);
+    height: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1000;
+    scale: 0 1;
+    transform-origin: left ;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-watcher {
+    from { scale: 0 0.2;}
+    to {scale: 1 1;}
+  }
+
+}
