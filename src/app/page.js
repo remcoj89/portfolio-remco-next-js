@@ -1,21 +1,28 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Styles from "./page.module.css";
+
+// Components
 import Navbar from "@/ui/components/navbar/navbar.component";
-
-import { sanityFetch } from "@/sanity/client";
-import Link from "next/link";
-const PROJECT_QUERY = `*[_type == "project"]{_id, name, slug, image, liveView}`;
+import GradientBackgroundComponent from "@/ui/components/gradient-background/gradient-background.component";
 
 
-export default async function Home() {
-  const projects = await sanityFetch({query: PROJECT_QUERY});
-  console.log(projects)
+
+// import { sanityFetch } from "@/sanity/client";
+// import Link from "next/link";
+// const PROJECT_QUERY = `*[_type == "project"]{_id, name, slug, image, liveView}`;
+
+
+export default function Home() {
+  // const projects = await sanityFetch({query: PROJECT_QUERY});
+
   return (
     <>
-    <Navbar />
-    <main className={styles.main}>
+      <Navbar />
+      <main className={Styles.main}>
+        {/* Animated gradient background */}
+        <GradientBackgroundComponent />
 
-    </main>
+      </main>
     </>
   );
 }
