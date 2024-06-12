@@ -1,6 +1,6 @@
 .cardContent{
   align-items: flex-end;
-  border-radius: ;
+  border-radius: var(--border-radius-card);
   display: flex;
   justify-content: space-between;
   padding-top: 1.6rem;

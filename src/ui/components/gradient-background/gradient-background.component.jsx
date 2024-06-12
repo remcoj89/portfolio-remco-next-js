@@ -1,7 +1,7 @@
 'use client'
 import Styles from './gradient-backround.module.css';
 
-import React, {useEffect} from 'react'
+import React from 'react'
 
 export default function gradientBackgroundComponent() {
   return (
@@ -21,7 +21,6 @@ export default function gradientBackgroundComponent() {
         <div className={Styles.gradient3} />
         <div className={Styles.gradient4} />
         <div className={Styles.gradient5} />
-        <div className={Styles.interactive} />
       </div>
     </div>
   )

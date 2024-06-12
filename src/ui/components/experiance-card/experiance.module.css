@@ -1,0 +1,75 @@
+.experianceWrapper {
+  background-color: var(--color-primary-500);
+  border-radius: var(--border-radius-card );
+  color: var(--color-gray-50);
+  text-align: center;
+ }
+
+  .experiance {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-card);
+    width: 100%;
+  }
+
+  .experiance:nth-child(2)::before {
+    content: '';
+    background-color: var(--color-gray-50);
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 0%;
+    inset-inline: 25%;
+    width: 50%;
+  }
+  .experiance:nth-child(2)::after {
+    content: '';
+    background-color: var(--color-gray-50);
+    display: block;
+    height: 1px;
+    position: absolute;
+    bottom: 0%;
+    inset-inline: 25%;
+    width: 50%;
+  }
+
+  .experianceNumber {
+    font-size: var(--font-size-experience-title) ;
+    line-height: 1.4;
+  }
+
+
+ @media (min-width: 650px) {
+  .experianceWrapper {
+    display: flex;
+    justify-content: space-evenly;
+   }
+
+   .experiance {
+    width :100%;
+   }
+
+
+  .experiance:nth-child(2)::before {
+    left: 0px;
+    height: 50%;
+    top: 25%;
+    bottom: 25%;
+    width: 1px;
+  }
+  .experiance:nth-child(2)::after{
+    display: none;
+  }
+
+  .experiance:last-child::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    height: 50%;
+    top: 25%;
+    bottom: 25%;
+    width: 1px;
+    background-color: var(--color-gray-50);
+  }
+}

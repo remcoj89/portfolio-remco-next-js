@@ -1,11 +1,20 @@
-import VisualDesignIcon from '@/assets/icons/visual-design-icon';
 import Styles from './project-section.module.css';
+// Components
+import CardsWrapper from '@/ui/components/cards-wrapper/cards.wrapper.compenent';
+import Button from '@/ui/components/button/button.component';
+// Icons
+import VisualDesignIcon from '@/assets/icons/visual-design-icon';
 import CaseStudyIcon from '@/assets/icons/case-study-icon';
 import ProjectsIcon from '@/assets/icons/projects-icon';
-import ProjectCard from '@/ui/components/project-card/project-card.component';
+import ArrowRight from '@/assets/icons/arrow-right-icon';
 
+
+// import { sanityFetch } from "@/sanity/client";
+// import Link from "next/link";
+// const PROJECT_QUERY = `*[_type == "project"]{_id, name, slug, image, liveView}`;
 
 export default function ProjectSection() {
+// const projects = await sanityFetch({query: PROJECT_QUERY});
   return (
     <section id="projectSection">
       <div className={Styles. projectSectionWrapper}>
@@ -23,10 +32,9 @@ export default function ProjectSection() {
         </div>
 
         {/* Project Cards */}
-        <div className={Styles.projectCardsWrapper}>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+        <CardsWrapper />
+        <div className={Styles.btnWrapper}>
+          <Button>Deze kant op voor meer <ArrowRight/></Button>
         </div>
       </div>
     </section>

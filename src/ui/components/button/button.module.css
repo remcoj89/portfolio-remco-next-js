@@ -1,0 +1,24 @@
+.btn {
+  align-items: center;
+  border: none;
+  border-radius: var(--border-radius-btn);
+  cursor: pointer;
+  display: flex;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-500);
+  gap:1.8rem;
+  justify-content: center;
+  padding-block: 1.6rem;
+  padding-inline: 3.2rem;
+  transition: ease-in-out .4s;
+}
+
+.btnPrimary {
+  background-color: var(--color-primary-500);
+  color: var(--color-gray-50);
+  line-height: 2.4;
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-primary-700);
+}

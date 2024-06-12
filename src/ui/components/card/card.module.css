@@ -1,0 +1,13 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3.6rem;
+  padding: var(--padding-card);
+  border-radius: var(--border-radius-card);
+  border: 0.5px solid rgba(255, 255, 255, 0.40);
+  background: rgba(31, 41, 55, 0.40);
+  backdrop-filter: blur(10px);
+  height: 100%;
+}
