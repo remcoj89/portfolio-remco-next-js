@@ -1,11 +1,8 @@
-'use client'
 import Styles from './button.module.css';
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
-export default function Button({children}) {
-  const router = useRouter()
-
+export default function Button({link, children}) {
   return (
-    <button className={`${Styles.btn} ${Styles.btnPrimary}`} onClick={() => router.push('/about')}>{children}</button>
+    <Link className={`${Styles.btn} ${Styles.btnPrimary}`} href={link}>{children}</Link>
   )
 }

@@ -22,6 +22,7 @@ useEffect(() => {setScreenWidth(window.screen.width)},[])
 // Toggle burger menu
 const toggleBurgerMenu = () => { setIsMenuOpen(!isMenuOpen)}
 
+console.log(pathname)
   return (
   <>
     <nav className={Styles.navbar}>
@@ -31,11 +32,11 @@ const toggleBurgerMenu = () => { setIsMenuOpen(!isMenuOpen)}
           <div className={Styles.navlinks} style={isMenuOpen || screenWidth >= 478 ? {display: "flex"} : {display: "none"}}>
             <li className={`${Styles.navLink} ${pathname === '/' ? `${Styles.active}` : ""}`} ><Link href="/">home</Link></li>
             <span className={Styles.navDivider} />
-            <li className={`${Styles.navLink} ${pathname === '#projects' ? `${Styles.active}` : ""}`} ><Link href="/projects">Mijn Werk</Link></li>
+            <li className={`${Styles.navLink} ${pathname === '/projects' ? `${Styles.active}` : ""}`} ><Link href="/projects">Mijn Werk</Link></li>
             <span className={Styles.navDivider} />
-            <li className={`${Styles.navLink} ${pathname === '#posts' ? `${Styles.active}` : ""}`} ><Link href="/posts">Blog</Link></li>
+            <li className={`${Styles.navLink} ${pathname === '/blog' ? `${Styles.active}` : ""}`} ><Link href="/blog">Blog</Link></li>
             <span className={Styles.navDivider} />
-            <li className={`${Styles.navLink} ${pathname === '#about' ? `${Styles.active}` : ""}`} ><Link href="/about">Wie is Remco</Link></li>
+            <li className={`${Styles.navLink} ${pathname === '/about' ? `${Styles.active}` : ""}`} ><Link href="/about">Wie is Remco</Link></li>
             <li className={`${Styles.navLink} ${pathname === '#contact' ? `${Styles.active}` : ""}`} ><Link className={Styles.contactLinkWrapper} href="/contact"><span className={Styles.emailIcon}><EmailIcon /></span> Let's Talk</Link></li>
           </div>
           <div className={Styles.burgerMenu}>Menu <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} isMenuOpen={isMenuOpen}/></div>

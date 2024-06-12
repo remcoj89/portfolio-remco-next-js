@@ -13,22 +13,11 @@
   line-height: var(--line-heigth-title);
 }
 
-  .cardsGridSectionHeaderText > p{
+.cardsGridSectionHeaderText > p{
   font-size: var(--font-size-body);
   margin-top: 12px;
 }
 
-.cardsGridSectionHeaderIcons {
-  display: flex;
-  font-size: 1.4rem;
-  margin-top: 2.4rem;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.icon > span {
-  display: block;
-}
 
 .btnWrapper {
   display: flex;
@@ -50,11 +39,7 @@
   }
 
   .cardsGridSectionHeaderText{
-    width: 50%;
-  }
-
-  .cardsGridSectionHeaderIcons {
-    width: 40%;
+    width: 60%;
   }
 
   .icon {

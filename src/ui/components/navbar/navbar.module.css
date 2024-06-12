@@ -63,8 +63,8 @@
   color: var(--color-primary-700);
 }
 
-  .active {
-  color: var(--color-cyan-100);
+.active {
+  color: var(--color-cyan-400);
 }
 
 .contactLinkWrapper {

@@ -5,11 +5,17 @@ import Link from 'next/link';
 
 import ArrowIcon from '@/assets/icons/arrow-icon';
 
-export default function ProjectCard() {
+export default function ProjectCard({imageHeight, imageWidth}) {
   return (
     <div className={Styles.projectCard}>
-      <Image className={Styles.cardImage} src="/assets/images/Rectangle 22projectcard1.png" height={500} width={500} alt="" />
-    <div className={Styles.cardContent}>
+      <Image
+        className={Styles.cardImage}
+        style={{widht: imageWidth, height:imageHeight}}
+        src="/assets/images/Rectangle 22projectcard1.png"
+        height={500} width={500}
+        alt=""
+      />
+      <div className={Styles.cardContent}>
       <div >
         <span className={Styles.projectInfo}>Vue.js | Figma | Vercel</span>
         <span className={Styles.projectInfo}>B&B Schermer</span>
