@@ -34,8 +34,6 @@ console.log(pathname)
             <span className={Styles.navDivider} />
             <li className={`${Styles.navLink} ${pathname === '/projects' ? `${Styles.active}` : ""}`} ><Link href="/projects">Mijn Werk</Link></li>
             <span className={Styles.navDivider} />
-            <li className={`${Styles.navLink} ${pathname === '/blog' ? `${Styles.active}` : ""}`} ><Link href="/blog">Blog</Link></li>
-            <span className={Styles.navDivider} />
             <li className={`${Styles.navLink} ${pathname === '/about' ? `${Styles.active}` : ""}`} ><Link href="/about">Wie is Remco</Link></li>
             <li className={`${Styles.navLink} ${pathname === '#contact' ? `${Styles.active}` : ""}`} ><Link className={Styles.contactLinkWrapper} href="/contact"><span className={Styles.emailIcon}><EmailIcon /></span> Let's Talk</Link></li>
           </div>

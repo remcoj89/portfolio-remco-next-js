@@ -123,7 +123,7 @@
   --font-size-button: 1.6rem;
 
   --line-height-hero-title: clamp(3.7rem, 3.246vw + 2.726rem, 7.4rem);
-  --line-heigt-title: 120%;
+  --line-height-title: 1.2;
   --line-height-body: clamp(2.4rem, 0.351vw + 2.295rem, 2.8rem);
 
   --font-weight-body: 400;

@@ -20,6 +20,12 @@
 
 .reviewAuthor {
   color: var(--color-gray-300);
+}
+.reviewAuthor > span {
+  display: block;
+}
+
+.reviewAuthorName{
   font-weight: var(--font-weight-bold);
 }
 

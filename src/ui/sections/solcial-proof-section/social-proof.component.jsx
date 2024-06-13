@@ -17,11 +17,13 @@ export default function SocialProof() {
         <div className={Styles.reviewGrid}>
 
           <div className={`${Styles.gridItem} ${Styles.gridItem1}`}>
-            <Card >
-              <div className={Styles.reviewText}>
-                <p>"Zijn werkkwaliteit is uitstekend! Ik geef de voorkeur aan Mehedi bij elk belangrijk ontwerpwerk. Hij werkt snel, netjes en presenteert geweldige bruikbare resultaten." </p>
-              </div>
-              <span className={Styles.reviewAuthor}>Harald Pfeifer</span>
+          <Card>
+            <div className={Styles.reviewText}>
+              <p>Remco heeft aan veel projecten met ons samengewerkt en is er altijd doorheen gekomen. Remco is professioneel met oog voor detail en haalt zijn deadlines.</p>
+              <p>Zijn werk is altijd uitstekend en gebruikt veel van zijn eigen creativiteit en begrijpt ons en onze projecten met eenvoudige aanwijzingen.</p>
+              <p>Hij is gemakkelijk om mee te werken en reageert snel op elk verzoek dat we ooit hebben gehad.</p>
+            </div>
+              <span className={Styles.reviewAuthor}>Geoff Crutcher</span>
             </Card>
           </div>
 
@@ -37,13 +39,18 @@ export default function SocialProof() {
           </div>
 
           <div className={`${Styles.gridItem} ${Styles.gridItem3}`}>
-            <Card>
-            <div className={Styles.reviewText}>
-              <p>Remco heeft aan veel projecten met ons samengewerkt en is er altijd doorheen gekomen. Remco is professioneel met oog voor detail en haalt zijn deadlines.</p>
-              <p>Zijn werk is altijd uitstekend en gebruikt veel van zijn eigen creativiteit en begrijpt ons en onze projecten met eenvoudige aanwijzingen.</p>
-              <p>Hij is gemakkelijk om mee te werken en reageert snel op elk verzoek dat we ooit hebben gehad.</p>
-            </div>
-              <span className={Styles.reviewAuthor}>Geoff Crutcher</span>
+          <Card >
+              <div className={Styles.reviewText}>
+                <p>We hebben Remco ingehuurd  via Upwork om een ​​website voor onze bed & breakfast te ontwerpen en bouwen. Wij zijn zeer tevreden met het resultaat en bevelen hem dan ook graag aan.</p>
+                <p>Remco toonde grote vaardigheid in zowel ontwerp als ontwikkeling, waardoor een website ontstond die perfect bij onze behoeften paste. Zijn aandacht voor detail, reactievermogen op onze feedback en tijdige levering overtroffen onze verwachtingen.</p>
+
+                <p>Het was een positieve en efficiënte ervaring om met Remco samen te werken, en we zouden niet aarzelen om bij toekomstige projecten opnieuw met hem samen te werken. </p>
+                <p>Sterk aanbevolen!</p>
+              </div>
+              <div className={Styles.reviewAuthor}>
+                <span className={Styles.reviewAuthorName}>Linda Munster</span>
+                <span className={Styles.reviewAuthorCompagny}>B&B Schermer Eylandt</span>
+              </div>
             </Card>
           </div>
 

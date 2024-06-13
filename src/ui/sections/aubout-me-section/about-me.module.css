@@ -1,0 +1,53 @@
+.aboutMeWrapper {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: 1fr;
+  text-wrap: balance ;
+  text-align: center;
+}
+
+.aboutMeTitle {
+  line-height: var(--line-height-title);
+  font-size: var(--font-size-heading-large );
+}
+
+.aboutMeImage {
+  margin-bottom: 1.8rem;
+  width: 40%;
+}
+
+
+.aboutMeArticle {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.buttonWrapper {
+  justify-self: center;
+}
+
+@media (min-width: 650px) {
+  .aboutMeWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-row-gap: 2.8rem;
+    justify-content: space-between;
+  }
+
+  .aboutMeCard {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+
+  .aboutMeTitle {
+    text-align: left;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .aboutMeArticle {
+    text-align: left;
+    grid-area: 2 / 2 / 4 / 3; }
+
+  .buttonWrapper {
+    align-self: end;
+    grid-area: 3 / 1 / 4 / 2; }
+}

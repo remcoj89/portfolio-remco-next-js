@@ -6,7 +6,8 @@ import GradientBackgroundComponent from "@/ui/components/gradient-background/gra
 import SectionHero from "@/ui/sections/hero-section/hero-section.component";
 import ProjectSection from "@/ui/sections/projects-section/project-section.component";
 import SocialProof from "@/ui/sections/solcial-proof-section/social-proof.component";
-import BlogSection from "@/ui/sections/blog-section/blog-section.component";
+import AboutMe from "@/ui/sections/aubout-me-section/about-me.component";
+
 
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
           <SectionHero />
           <ProjectSection />
           <SocialProof />
-          <BlogSection />
+          <AboutMe />
         </div>
       </main>
     </>

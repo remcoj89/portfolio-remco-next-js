@@ -1,4 +1,6 @@
+// Styling
 import Styles from './project-section.module.css';
+
 // Components
 import CardsWrapper from '@/ui/components/cards-wrapper/cards.wrapper.compenent';
 import Button from '@/ui/components/button/button.component';
@@ -10,15 +12,17 @@ import VisualDesignIcon from '@/assets/icons/visual-design-icon';
 import CaseStudyIcon from '@/assets/icons/case-study-icon';
 import ProjectsIcon from '@/assets/icons/projects-icon';
 
-
-// import { sanityFetch } from "@/sanity/client";
+// Sanity CMS
+import { fetchSanity } from '@/utils/sanity-funcions';
 // import Link from "next/link";
-// const PROJECT_QUERY = `*[_type == "project"]{_id, name, slug, image, liveView}`;
+const PROJECT_QUERY = `*[_type == "project"]{_id, name, Subtitle, slug, thumbnail, liveView}`;
 
-export default function ProjectSection() {
-// const projects = await sanityFetch({query: PROJECT_QUERY});
-  return (
-    <section id="projectSection">
+
+export default async function ProjectSection() {
+const projects = await fetchSanity({query: PROJECT_QUERY});
+
+return (
+  <section id="projectSection">
       <div className={Styles.cardsGridSectionWrapper}>
         {/* Header */}
         <div className={Styles.cardsGridSectionHeader}>
@@ -26,7 +30,7 @@ export default function ProjectSection() {
             <h2>Mijn Werk</h2>
             <p>Hier zijn enkele van mijn frontend-projecten die mijn codeer vaardigheden en expertise. Klik op elk project om het te bekijken</p>
           </div>
-          <div className={Styles.projectSectionHeaderIcons}>
+          <div className={Styles.cardsGridSectionHeaderIcons}>
               <div className={`${Styles.icon} `}><VisualDesignIcon/> <span>Visual Design</span></div>
               <div className={`${Styles.icon} `}><CaseStudyIcon/>< span>Case Study</span> </div>
               <div className={`${Styles.icon} `}><ProjectsIcon/> <span>Projects</span></div>
@@ -35,9 +39,13 @@ export default function ProjectSection() {
 
         {/* Project Cards */}
         <CardsWrapper >
-          <ProjectCard imageHeight={400} imageWidth={500}/>
-          <ProjectCard imageHeight={400} imageWidth={500}/>
-          <ProjectCard imageHeight={400} imageWidth={500}/>
+          {projects.map((project) => {
+            return (
+
+              <ProjectCard props={project} imageHeight={400} imageWidth={500} key={project._id}/>
+
+            )
+            })}
         </CardsWrapper>
 
         <div className={Styles.btnWrapper}>

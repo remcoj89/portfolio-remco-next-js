@@ -54,6 +54,7 @@
   }
 
   .cardsGridSectionHeaderIcons {
+    display: flex;
     width: 40%;
   }
 
