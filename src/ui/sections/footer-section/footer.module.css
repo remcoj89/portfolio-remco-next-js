@@ -1,0 +1,19 @@
+.footer {
+  position: relative;
+  padding-block: var(--nav-bar-padding-block);
+  margin-top: var(--section-margin-top);
+}
+
+.footerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialMediaIcons {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.socialMediaIcon {
+  cursor: pointer;
+}

@@ -8,6 +8,7 @@ import EmailIcon from '@/assets/icons/email-icon';
 
 
 export default function AboutMe() {
+  const mailSubject = "Let's talk"
   return (
     <section id="about-me-section">
       <div className={Styles.aboutMeWrapper}>
@@ -34,7 +35,7 @@ export default function AboutMe() {
 
           {/* Grid item 4 */}
           <div className={Styles.buttonWrapper}>
-            <Button link='/about'>
+            <Button link={`mailto: remcojonk@hotmail.com?subject=${mailSubject}`}>
               <EmailIcon/>  Let's Talk
             </Button>
           </div>

@@ -29,7 +29,7 @@ export default function ProjectCard({props, imageHeight, imageWidth}) {
         <span className={Styles.projectInfo}>{name}</span>
         <span className={Styles.projectInfo}>{Subtitle}</span>
       </div>
-      <Link className={Styles.cardBtn} href={`/projects/project/${slug.current}`}><ArrowIcon/></Link>
+      <Link className={Styles.cardBtn} href={`/projects/${slug.current}`}><ArrowIcon/></Link>
      </div>
     </div>
   )

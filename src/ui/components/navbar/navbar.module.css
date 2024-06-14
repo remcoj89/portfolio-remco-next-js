@@ -1,7 +1,6 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .navbar {
-    --nav-bar-padding-block: 3rem;
     padding-block: var(--nav-bar-padding-block);
     position: -webkit-fixed;
     position: fixed;
@@ -24,6 +23,8 @@
 
 .logo {
   font-size: var(--font-size-heading-medium);
+  cursor: pointer;
+
 }
 
 .navlinks {
@@ -34,7 +35,6 @@
   inset: calc(var(--nav-bar-padding-block) + 3.3rem) auto;
   padding-block: var(--nav-bar-padding-block);
   position: absolute;
-  width: 100%;
 }
 
 .navLink {

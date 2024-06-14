@@ -21,8 +21,7 @@ useEffect(() => {setScreenWidth(window.screen.width)},[])
 
 // Toggle burger menu
 const toggleBurgerMenu = () => { setIsMenuOpen(!isMenuOpen)}
-
-console.log(pathname)
+  const mailSubject = "Let's talk"
   return (
   <>
     <nav className={Styles.navbar}>
@@ -35,7 +34,7 @@ console.log(pathname)
             <li className={`${Styles.navLink} ${pathname === '/projects' ? `${Styles.active}` : ""}`} ><Link href="/projects">Mijn Werk</Link></li>
             <span className={Styles.navDivider} />
             <li className={`${Styles.navLink} ${pathname === '/about' ? `${Styles.active}` : ""}`} ><Link href="/about">Wie is Remco</Link></li>
-            <li className={`${Styles.navLink} ${pathname === '#contact' ? `${Styles.active}` : ""}`} ><Link className={Styles.contactLinkWrapper} href="/contact"><span className={Styles.emailIcon}><EmailIcon /></span> Let's Talk</Link></li>
+            <li className={`${Styles.navLink} ${pathname === '#contact' ? `${Styles.active}` : ""}`} ><Link className={Styles.contactLinkWrapper} href={`mailto: remcojonk@hotmail.com?subject=${mailSubject}`}><span className={Styles.emailIcon}><EmailIcon /></span> Let's Talk</Link></li>
           </div>
           <div className={Styles.burgerMenu}>Menu <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} isMenuOpen={isMenuOpen}/></div>
         </div>
