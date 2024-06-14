@@ -42,7 +42,7 @@ return (
           {projects.map((project) => {
             return (
 
-              <ProjectCard props={project} imageHeight={400} imageWidth={500} key={project._id}/>
+              <ProjectCard props={project} imageHeight={250} imageWidth={500} key={project._id}/>
 
             )
             })}

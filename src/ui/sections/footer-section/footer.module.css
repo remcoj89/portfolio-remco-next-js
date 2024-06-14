@@ -1,5 +1,4 @@
 .footer {
-  position: relative;
   padding-block: var(--nav-bar-padding-block);
   margin-top: var(--section-margin-top);
 }
