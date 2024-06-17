@@ -83,7 +83,6 @@ export default async function ProjectPage({params}) {
               alt={`Thumbnail foto van ${name} website`}
             />
             <div className={Styles.heroProjectInfo}>
-              <Image className={Styles.projectLogo} src={projectImageUrl} height={250} width={250} alt={`logo van ${name}`}/>
               <div>
                 <h1>{name}</h1>
                 <h4>{Subtitle}</h4>

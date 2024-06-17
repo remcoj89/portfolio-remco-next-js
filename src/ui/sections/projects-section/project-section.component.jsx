@@ -39,11 +39,9 @@ return (
 
         {/* Project Cards */}
         <CardsWrapper >
-          {projects.map((project) => {
+          {projects.slice(-3).sort((a, b) => b._id - a._id).map((project) => {
             return (
-
               <ProjectCard props={project} imageHeight={250} imageWidth={500} key={project._id}/>
-
             )
             })}
         </CardsWrapper>
