@@ -14,7 +14,7 @@ export default async function ProjectsGrid() {
     <CardsWrapper>
       {projects.sort((a, b) => b._id - a._id).map((project) => {
         return (
-          <ProjectCard props={project} imageHeight={250} imageWidth={500} key={project._id}/>
+          <ProjectCard props={project} key={project._id}/>
         )
         })}
     </CardsWrapper>

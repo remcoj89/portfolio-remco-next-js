@@ -6,12 +6,12 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 1,
     },
-    {
-      url: 'https://remcojonk/about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
+    // {
+    //   url: 'https://remcojonk/about',
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.8,
+    // },
     {
       url: 'https://remcojonk/projects',
       lastModified: new Date(),

@@ -15,7 +15,7 @@ import ProjectsIcon from '@/assets/icons/projects-icon';
 // Sanity CMS
 import { fetchSanity } from '@/utils/sanity-funcions';
 // import Link from "next/link";
-const PROJECT_QUERY = `*[_type == "project"]{_id, name, Subtitle, slug, thumbnail, liveView}`;
+const PROJECT_QUERY = `*[_type == "project"]{_id, name, Subtitle, slug, thumbnail, backgroundcolor, liveView}`;
 
 
 export default async function ProjectSection() {
@@ -28,7 +28,7 @@ return (
         <div className={Styles.cardsGridSectionHeader}>
           <div className={Styles.cardsGridSectionHeaderText}>
             <h2>Mijn Werk</h2>
-            <p>Hier zijn enkele van mijn frontend-projecten die mijn codeer vaardigheden en expertise. Klik op elk project om het te bekijken</p>
+            <p>Hier zijn enkele van mijn frontend-projecten </p>
           </div>
           <div className={Styles.cardsGridSectionHeaderIcons}>
               <div className={`${Styles.icon} `}><VisualDesignIcon/> <span>Visual Design</span></div>
@@ -41,7 +41,7 @@ return (
         <CardsWrapper >
           {projects.slice(-3).sort((a, b) => b._id - a._id).map((project) => {
             return (
-              <ProjectCard props={project} imageHeight={250} imageWidth={500} key={project._id}/>
+              <ProjectCard props={project} key={project._id}/>
             )
             })}
         </CardsWrapper>

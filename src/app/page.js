@@ -15,8 +15,8 @@ export default function Home() {
       <div className="wrapper">
         <SectionHero />
         <ProjectSection />
-        <SocialProof />
         <AboutMe />
+        {/* <SocialProof /> */}
       </div>
     </main>
   );

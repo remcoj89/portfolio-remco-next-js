@@ -5,11 +5,20 @@
   position: relative;
 }
 
+.backgroundImage{
+  border-radius: var(--border-radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:50vh;
+  width: fit-content;
+}
+
 .heroImage{
   border-radius: var(--border-radius-card);
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  height :50svh;
+  height: 100%;
   width: 100%;
 }
 

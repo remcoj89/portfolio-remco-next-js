@@ -56,6 +56,7 @@ export default async function ProjectPage({params}) {
 
  const {
     buildTime,
+    backgroundcolor,
     description,
     gallery,
     liveView,
@@ -74,14 +75,17 @@ export default async function ProjectPage({params}) {
     <main className={Styles.main}>
       <div className="wrapper">
         <section id="project-hero-section">
-          <div className={Styles.hero}>
+          <div className={Styles.hero} >
+            <div className={Styles.backgroundImage} style={{backgroundColor: backgroundcolor}} >
             <Image
               className={Styles.heroImage}
               src={projectImageUrl}
               width={500}
-              height={500}
+              height={250}
               alt={`Thumbnail foto van ${name} website`}
             />
+
+            </div>
             <div className={Styles.heroProjectInfo}>
               <div>
                 <h1>{name}</h1>

@@ -13,9 +13,9 @@ export default function SectionHero() {
   return (
   <section id="section-hero">
     <div className={Styles.heroWrapper}>
-      <h1 className={Styles.heroTitle}>Crafting Memorable User Experiences for Business Success</h1>
-      <h2 className={Styles.heroSubTitle}>I blend exquisite design with impeccable functionality for an exceptional
-      user experience, while keeping users captivated.</h2>
+      <p>Hoi, Ik ben Remco Jonk</p>
+      <h1 className={Styles.heroTitle}>Freelance Front-end Developer</h1>
+      <h2 className={Styles.heroSubTitle}>Gespecialiceerd in React, Next.js & Webflow</h2>
       <div onClick={handleClick}>
         <DoubleArrowDown/>
       </div>

@@ -1,126 +1,166 @@
-
-@media (prefers-reduced-motion: no-preference) {
-  .navbar {
-    padding-block: var(--nav-bar-padding-block);
-    position: -webkit-fixed;
-    position: fixed;
-    top: 0;
-    inset-inline: 0;
-    z-index: 100;
-    animation: scroll-watcher linear forwards;
-    animation-timeline: scroll();
-    animation-range: 10px 25vh;
-  }
+.header {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  z-index: 9999;
 }
 
-.navContainer {
-  align-items: center;
+.nav {
+  color: var(--color-slate-100);
+  height: 75px;
+  line-height: 75px;
+  padding-inline: 30px;
+}
+
+.nav .logo {
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav .navWrapper {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin: auto;
+  max-width: 1250px;
   position: relative;
 }
 
-.logo {
-  font-size: var(--font-size-heading-medium);
-  cursor: pointer;
-
+.navWrapper input {
+  display: none;
 }
 
-.navlinks {
+.navButton {
   align-items: center;
-  background: var(--color-gray-900);
-  flex-direction: column;
-  height: 100svh;
-  inset: calc(var(--nav-bar-padding-block) + 3.3rem) auto;
-  padding-block: var(--nav-bar-padding-block);
-  position: absolute;
+  color: var(--color-on-primary);
+  cursor: pointer;
+  display: grid;
+  height: 3rem;
+  width: 3rem;
+}
+
+.navWrapper .navLinks {
+  background: var(--color-slate-800);
+  box-shadow: rgba(0, 0, 0, 0.150);
+  display: block;
+  height: 100vh;
+  left:-100%;
+  line-height: 50px;
+  overflow-y: auto;
+  max-width: 100%;
+  padding: 50px 10px;
+  position: fixed;
+  top: 75px;
+  transition: all 0.3s ease;
+  width: 100%;
+  z-index: 999;
+  font-size: 2rem;
 }
 
 .navLink {
-  color: inherit;
-  list-style: none;
-  margin-bottom: 3.2rem;
+  display: block;
+  margin-left: 1rem;
   text-align: center;
 }
 
-.navDivider {
+.navLink:hover {
+  color: var(--color-slate-800);
+}
+
+.active, .navLink:hover {
+  color: var(--color-slate-800);
+  text-decoration: underline;
+}
+
+
+.navLinks::-webkit-scrollbar {
+  width: 0;
+}
+
+#menuButton:checked ~ .navLinks {
+  left: -0%;
+}
+
+#menuButton:checked ~ .menuButton {
   display: none;
-  background-color: var(--color-gray-400);
-  height: 2.4rem;
-  transform: rotate(15deg);
-  width: 1px;
 }
 
-.navLink a{
-  color: inherit;
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height);
-  text-transform: capitalize;
+.cancelButton {
+  display: none;
 }
 
-.navLink a:hover {
-  color: var(--color-primary-700);
+#menuButton:checked ~ .cancelButton {
+  display: block;
 }
 
-.active {
-  color: var(--color-cyan-400);
+.contactWrapper {
+  border-top: solid 1px rgb(var(--color-green));
+  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
-.contactLinkWrapper {
+.contactWrapper, .contactWrapper a {
   align-items: center;
   display: flex;
-  gap: 1.5rem;
-}
-.emailIcon {
-  align-items: center;
-  border: 1px solid var(--Gray-300, #D1D5DB);
-  border-radius: 74px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
   justify-content: center;
-  padding: 15px 14px;
+  gap: 2rem;
 }
 
-.burgerMenu {
-  align-items: center;
-  display: flex;
-  gap: 1.5rem
-}
 
-@media(min-width: 650px) {
-  .navlinks {
-    background: transparent;
+@media (min-width: 809px) {
+
+  .navWrapper .navLinks {
+    background-color: transparent;
     display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    position: static;
+    height: unset;
+    max-width: unset;
+    padding: unset;
+    overflow-y: unset;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    width: auto;
+    font-size: 1.6rem;
+  }
+
+  .navLink:hover {
+    color: rgb(var(--color-on-primary), 0.8);
+  }
+
+  .active, .navLink:hover {
+    color: rgb(var(--color-green));
+    text-decoration: none;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+  }
+
+
+  .contactWrapper {
+    border-top: none;
+    margin-top:unset;
+    padding-top:unset;
+    padding-left: 2rem;
+    border-left: solid 1px rgb(var(--color-green));
+  }
+
+  .contactWrapper, .contactWrapper a {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
     flex-direction: row;
-    gap: 3.2rem;
-    height: auto;
-    inset-block:auto;
-    justify-content: flex-end;
-    right: 0;
   }
 
-  .navLink {
-    margin: auto 0;
-    padding-inline-end: 1.5rem;
-  }
 
-  .burgerMenu {
-    display: none ;
-  }
-
-  .navDivider {
-    display: inline-block;
+  .navButton {
+    display: none;
   }
 }
 
-@keyframes scroll-watcher {
-  from { background: transparent;}
-  to {
-    background: rgba(var(--color-nav-background), 1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(70px);
-    -webkit-backdrop-filter: blur(5px);
+@media (max-width: 1056px) {
+  #emailLink {
+    display: none;
   }
 }

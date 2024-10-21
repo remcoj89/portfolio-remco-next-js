@@ -10,27 +10,35 @@ import { getProjectImageUrl } from '@/utils/sanity-funcions';
 // Components
 import ArrowIcon from '@/assets/icons/arrow-icon';
 
-export default function ProjectCard({props, imageHeight, imageWidth}) {
-  const {name, Subtitle, slug, thumbnail} = props
+export default function ProjectCard({props}) {
+  const {name, subtitle, slug, thumbnail, backgroundcolor} = props
 
  const projectImageUrl = getProjectImageUrl(thumbnail);
 
   return (
+    <Link href={`/projects/${slug.current}`}>
     <div className={Styles.projectCard}>
+      <div className={Styles.imageWrapper} style={{backgroundColor: backgroundcolor}}>
+
       <Image
         className={Styles.cardImage}
-        style={{widht: imageWidth, height:imageHeight}}
+
         src={projectImageUrl}
         height={500} width={500}
         alt={`Screenshot van ${name} website`}
       />
+      </div>
       <div className={Styles.cardContent}>
       <div >
         <span className={Styles.projectInfo}>{name}</span>
-        <span className={Styles.projectInfo}>{Subtitle}</span>
+        <span className={Styles.projectInfo}>{subtitle}</span>
       </div>
-      <Link className={Styles.cardBtn} href={`/projects/${slug.current}`}><ArrowIcon/></Link>
+
+      <div className={Styles.cardBtn}>
+        <ArrowIcon/>
+      </div>
      </div>
     </div>
+     </Link>
   )
 }

@@ -13,7 +13,7 @@ export default function AboutMe() {
     <section id="about-me-section">
       <div className={Styles.aboutMeWrapper}>
           {/* Grid item 1 */}
-          <h3 className={Styles.aboutMeTitle}>Mijn lange verhaal in het kort</h3>
+          <h3 className={Styles.aboutMeTitle}>Een aantal weetjes over mij</h3>
 
           {/* Grid item 2 */}
           <div className={Styles.aboutMeCard}>
@@ -24,21 +24,21 @@ export default function AboutMe() {
 
           {/* Grid item 3 */}
           <article className={Styles.aboutMeArticle}>
-            <p>Van militair naar monteur tot code-enthousiast: mijn verhaal is doordrenkt van ongebruikelijke wendingen en verrassende ontdekkingen.</p>
 
-            <p>Mijn naam is Remco Jonk</p>
+            <h4>Hoi, ik ben Remco</h4>
 
-            <p>As a former cricket team captain, I gained valuable teamwork and empathy skills that have helped me contribute positively to any situation.</p>
-
-            <p>Now, I'm passionate about helping others, and I'm working to build a Designer Community to assist new designers in their journey to success.</p>
+            <ul>
+              <li>&#x1F3E1; Geboren en getogen in het pitoreske Schermerhon. Geeft niet als je er nog nooit van hebt gehoord het is een heel klein dorpje onder de rook van Alkmaar</li>
+              <br />
+              <li>&#128187; Vroeger wilde ik vuilnisman worden of militair. Een daarvan is gelukt maar na 10 jaar werd het wel eens tijd voor iets nieuws en website bouwer is een goede tweede stap</li>
+              <br />
+              <li>&#127947; Wanneer ik klaar ben met het maken van websites, ga ik graag even sporten je kan mij dan ook bijna dagelijks in de plaatselijke Crossfit box vinden</li>
+            </ul>
+            <Button link={`mailto: remcojonk@hotmail.com?subject=${mailSubject}`}>
+              Zin in een (digitaal) &#9749; ?
+            </Button>
           </article>
 
-          {/* Grid item 4 */}
-          <div className={Styles.buttonWrapper}>
-            <Button link={`mailto: remcojonk@hotmail.com?subject=${mailSubject}`}>
-              <EmailIcon/>  Let's Talk
-            </Button>
-          </div>
       </div>
     </section>
   )
