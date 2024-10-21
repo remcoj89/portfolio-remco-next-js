@@ -5,7 +5,6 @@ import GradientBackgroundComponent from "@/ui/components/gradient-background/gra
 
 
 // Sanity CMS
-import { fetchSanity } from '@/utils/sanity-funcions';
 import ProjectsGrid from "@/ui/components/projects-grid/projects-grid.component";
 
 

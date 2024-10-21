@@ -16,6 +16,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@sanity/eslint-config-studio": "^4.0.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3"
   }

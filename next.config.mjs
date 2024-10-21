@@ -3,6 +3,9 @@ const nextConfig = {
   images: {
     domains: ["cdn.sanity.io", "via.placeholder.com"],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

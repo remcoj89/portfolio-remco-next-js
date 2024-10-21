@@ -10,7 +10,7 @@ import ArrowRight from '@/assets/icons/arrow-right-icon';
 export default function BlogSection() {
   return (
     <section id="blogSection">
-            <div className={Styles.cardsGridSectionWrapper}>
+      <div className={Styles.cardsGridSectionWrapper}>
         {/* Header */}
         <div className={Styles.cardsGridSectionHeader}>
           <div className={Styles.cardsGridSectionHeaderText}>

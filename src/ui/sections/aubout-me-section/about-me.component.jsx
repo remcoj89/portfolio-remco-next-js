@@ -3,12 +3,10 @@ import Styles from './about-me.module.css';
 import Image from 'next/image';
 // Components
 import Button from '@/ui/components/button/button.component';
-import ArrowRight from '@/assets/icons/arrow-right-icon';
-import EmailIcon from '@/assets/icons/email-icon';
-
 
 export default function AboutMe() {
   const mailSubject = "Let's talk"
+
   return (
     <section id="about-me-section">
       <div className={Styles.aboutMeWrapper}>
@@ -28,14 +26,14 @@ export default function AboutMe() {
             <h4>Hoi, ik ben Remco</h4>
 
             <ul>
-              <li>&#x1F3E1; Geboren en getogen in het pitoreske Schermerhon. Geeft niet als je er nog nooit van hebt gehoord het is een heel klein dorpje onder de rook van Alkmaar</li>
+              <li><span>&#x1F3E1;</span> Geboren en getogen in het pitoreske Schermerhon. Geeft niet als je er nog nooit van hebt gehoord het is een heel klein dorpje onder de rook van Alkmaar</li>
               <br />
-              <li>&#128187; Vroeger wilde ik vuilnisman worden of militair. Een daarvan is gelukt maar na 10 jaar werd het wel eens tijd voor iets nieuws en website bouwer is een goede tweede stap</li>
+              <li><span>&#128187;</span> Vroeger wilde ik vuilnisman worden of militair. Een daarvan is gelukt maar na 10 jaar werd het wel eens tijd voor iets nieuws en website bouwer is een goede tweede stap</li>
               <br />
-              <li>&#127947; Wanneer ik klaar ben met het maken van websites, ga ik graag even sporten je kan mij dan ook bijna dagelijks in de plaatselijke Crossfit box vinden</li>
+              <li><span>&#127947;</span> Wanneer ik klaar ben met het maken van websites, ga ik graag even sporten je kan mij dan ook bijna dagelijks in de plaatselijke Crossfit box vinden</li>
             </ul>
             <Button link={`mailto: remcojonk@hotmail.com?subject=${mailSubject}`}>
-              Zin in een (digitaal) &#9749; ?
+              Zin in een (digitaal) <span>&#9749;</span> ?
             </Button>
           </article>
 

@@ -10,7 +10,7 @@ export default function Footer() {
   <footer className={Styles.footer}>
     <div className="wrapper">
       <div className={Styles.footerWrapper}>
-         <p>Remco Jonk  	&#169;2024</p>
+         <p>Remco Jonk  	<span>&#169;</span>2024</p>
          <ul className={Styles.socialMediaIcons}>
           <li className={Styles.socialMediaIcon}><Link href='#'><LinkedInIcon/></Link></li>
           <li className={Styles.socialMediaIcon}><Link href='#'><GitHubIcon/></Link></li>

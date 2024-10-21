@@ -4,10 +4,7 @@ import Styles from './project-page.module.css';
 import { fetchSanity, getProjectImageUrl } from '@/utils/sanity-funcions';
 import { PortableText } from 'next-sanity';
 
-import Link from 'next/link';
 import Image from 'next/image';
-
-
 
 const PROJECT_QUERY = `*[
   _type == "project" &&
@@ -55,18 +52,11 @@ export default async function ProjectPage({params}) {
     });
 
  const {
-    buildTime,
     backgroundcolor,
     description,
-    gallery,
-    liveView,
-    logo,
     name,
-    sourceCode,
-    stack,
     Subtitle,
     thumbnail,
-    type,
    } = project
 
    const projectImageUrl = getProjectImageUrl(thumbnail);
@@ -99,11 +89,6 @@ export default async function ProjectPage({params}) {
               )}
           </div>
 
-        </section>
-        <section>
-          <div className="projectWrapper">
-
-          </div>
         </section>
       </div>
     </main>
